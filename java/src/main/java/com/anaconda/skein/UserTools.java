@@ -10,7 +10,8 @@ public class UserTools {
     final static String hiveTokenKind = "HIVE_DELEGATION_TOKEN";
 
     // Print from the Delegation Token file the Username (Identifier) and Password.
-    // With user + password you can create a Hive connection
+    // With user + password you can create a Hive connection.
+    // You can see an example here of how to use them: https://github.com/dropbox/PyHive/pull/321
     private static void printDelegationTokenIdandPassForHive(String tokenFilepath) throws IOException {
         Credentials credentials = Credentials.readTokenStorageFile(new File(tokenFilepath), null);
         for(Token t : credentials.getAllTokens()) {
